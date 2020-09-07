@@ -4,6 +4,7 @@
   "description": "Google Tag Opt In",
   "main": "index.js",
   "scripts": {
+    "build": "npx webpack --config webpack.config.js",
     "test": "jest",
     "coverage": "CI=true jest --coverage"
   },
@@ -23,7 +24,9 @@
   },
   "homepage": "https://github.com/luciomartinez/gtag-opt-in#readme",
   "devDependencies": {
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "engines": {
     "node": ">=8"
