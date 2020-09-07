@@ -1,6 +1,6 @@
 {
   "name": "gtag-opt-in",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "GTag Opt In",
   "main": "dist/index.js",
   "scripts": {
