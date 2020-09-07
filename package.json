@@ -1,5 +1,5 @@
 {
-  "name": "@luciomartinez/gtag-opt-in",
+  "name": "gtag-opt-in",
   "version": "1.0.0",
   "description": "GTag Opt In",
   "main": "index.js",
