@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports = {
+module.exports = [{
   entry: './src/index.js',
   output: {
     filename: 'index.js',
@@ -8,5 +8,14 @@ module.exports = {
     library: 'GTagOptIn',
     libraryTarget: 'var'
   },
-  mode: 'production',
-};
+  mode: 'production'
+},{
+  entry: './src/index.js',
+  output: {
+    filename: 'index.umd.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'GTagOptIn',
+    libraryTarget: 'umd'
+  },
+  mode: 'production'
+}];

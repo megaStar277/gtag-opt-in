@@ -1,8 +1,9 @@
 {
   "name": "gtag-opt-in",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "GTag Opt In",
   "main": "dist/index.js",
+  "module": "dist/index.umd.js",
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
     "test": "jest",
@@ -31,7 +32,9 @@
   "engines": {
     "node": ">=8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@analytics/google-tag-manager": "^0.2.3"
+  },
   "jest": {
     "coverageThreshold": {
       "global": {
