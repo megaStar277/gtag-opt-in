@@ -4,7 +4,8 @@
   "description": "Google Tag Opt In",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coverage": "CI=true jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "homepage": "https://github.com/luciomartinez/gtag-opt-in#readme",
   "devDependencies": {
     "jest": "^26.4.2"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
