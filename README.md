@@ -1,5 +1,5 @@
-# gtag-opt-in
-Google Tag Opt In
+# GTag Opt In
+> Google Analytics Opt In
 
 ## Goal
 The library's goal is to facilitate using an opt-in approach of cookies with Google Analytics. 
@@ -23,7 +23,7 @@ By using an opt-in approach, GA is disabled by default and if user wants to enab
  4. User clicks on opt-in
  5. Now, it enables tracking.
 
-Since the Google Tag doesn't support opt-in out of the box, the library will help to achieve this user-focused UX.
+Since Google Tag doesn't support opt-in out of the box, the library will help to achieve this user-focused UX.
 
 ## How to use it?
 gtag-opt-in requires two things:

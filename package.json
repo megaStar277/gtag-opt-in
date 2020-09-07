@@ -1,7 +1,7 @@
 {
-  "name": "gtag-opt-in",
+  "name": "@luciomartinez/gtag-opt-in",
   "version": "1.0.0",
-  "description": "Google Tag Opt In",
+  "description": "GTag Opt In",
   "main": "index.js",
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
@@ -30,5 +30,6 @@
   },
   "engines": {
     "node": ">=8"
-  }
+  },
+  "dependencies": {}
 }
