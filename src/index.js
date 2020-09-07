@@ -15,7 +15,7 @@ module.exports = function GTagOptIn(gaMeasurementId) {
 
   const throwIfGAMeasurementIdIsUndefined = () => {
     if (!this.gaMeasurementId) {
-      throw new Error('gtag-opt-in: the value of `gaMeasurementId` is invalid. Make sure to initialize properly and pass the Analytics ID on the constructor.');
+      throw new Error('gtag-opt-in: no value found for Analytics ID. Make sure to initialize properly the object and set its value as a constructor parameter.');
     }
   };
 

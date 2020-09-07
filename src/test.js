@@ -26,7 +26,7 @@ describe('GTagOptIn', () => {
 
   test('throw while running enable without GA Measurement ID', () => {
     const gtagOptIn = new GTagOptIn();
-    expect(gtagOptIn.enable).toThrowError(/gaMeasurementId/);
+    expect(gtagOptIn.enable).toThrowError(/Analytics ID/);
   });
 
   test('push GA Measurement ID to dataLayer on enable', () => {
