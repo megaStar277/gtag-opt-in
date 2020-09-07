@@ -1,4 +1,4 @@
-module.exports = function(gaMeasurementId) {
+module.exports = function GTagOptIn(gaMeasurementId) {
   let isInitialized = false;
 
   this.gaMeasurementId = gaMeasurementId;
