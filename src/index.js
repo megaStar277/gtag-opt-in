@@ -1,4 +1,4 @@
-module.exports = function GTagOptIn(gaMeasurementId) {
+function GTagOptIn(gaMeasurementId) {
   let isInitialized = false;
 
   this.gaMeasurementId = gaMeasurementId;
@@ -32,4 +32,6 @@ module.exports = function GTagOptIn(gaMeasurementId) {
     gtag('js', new Date());
     gtag('config', this.gaMeasurementId);
   };
-};
+}
+
+export default GTagOptIn;

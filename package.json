@@ -1,9 +1,9 @@
 {
   "name": "gtag-opt-in",
-  "version": "1.0.0-alpha.6",
-  "description": "GTag Opt In",
+  "version": "1.0.0-alpha.7",
+  "description": "Google Analytics Opt In",
   "main": "lib/index.js",
-  "module": "lib/index.js",
+  "module": "src/index.js",
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
     "test": "jest",
@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/luciomartinez/gtag-opt-in#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "jest": "^26.4.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
@@ -32,9 +34,7 @@
   "engines": {
     "node": ">=8"
   },
-  "dependencies": {
-    "@analytics/google-tag-manager": "^0.2.3"
-  },
+  "dependencies": {},
   "jest": {
     "coverageThreshold": {
       "global": {

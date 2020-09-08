@@ -1,4 +1,4 @@
-const GTagOptIn = require('./index');
+import GTagOptIn from './index';
 
 const GA_MEASUREMENT_ID = 'UA-126456490-1';
 

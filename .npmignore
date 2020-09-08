@@ -1,4 +1,3 @@
 .github/
 coverage/
-src/
 webpack.config.js
