@@ -6,7 +6,7 @@ module.exports = [{
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'GTagOptIn',
-    libraryTarget: 'umd'
+    libraryTarget: 'var'
   },
   mode: 'production'
 }];
