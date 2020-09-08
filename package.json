@@ -1,6 +1,6 @@
 {
   "name": "gtag-opt-in",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "description": "Google Analytics Opt In",
   "main": "dist/index.js",
   "module": "src/index.js",

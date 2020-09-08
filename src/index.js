@@ -9,7 +9,7 @@ function GTagOptIn(gaMeasurementId) {
 
   this.enable = () => {
     throwIfGAMeasurementIdIsUndefined();
-    initGtagIfNeeded();
+    initGTagIfNeeded();
     window[`ga-disable-${this.gaMeasurementId}`] = false;
   };
 
@@ -19,14 +19,14 @@ function GTagOptIn(gaMeasurementId) {
     }
   };
 
-  const initGtagIfNeeded = () => {
+  const initGTagIfNeeded = () => {
     if (!isInitialized) {
-      initGtag();
+      initGTag();
       isInitialized = true;
     }
   };
 
-  const initGtag = () => {
+  const initGTag = () => {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -34,4 +34,10 @@ function GTagOptIn(gaMeasurementId) {
   };
 }
 
-export default GTagOptIn;
+const init = (props) => {
+  return new GTagOptIn(props);
+};
+
+export {
+  init
+};
