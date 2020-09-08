@@ -3,11 +3,11 @@ function GTagOptIn(gaMeasurementId) {
 
   this.gaMeasurementId = gaMeasurementId;
 
-  this.disable = () => {
+  this.optout = () => {
     window[`ga-disable-${this.gaMeasurementId}`] = true;
   };
 
-  this.enable = () => {
+  this.optin = () => {
     throwIfGAMeasurementIdIsUndefined();
     initGTagIfNeeded();
     window[`ga-disable-${this.gaMeasurementId}`] = false;

@@ -24,18 +24,18 @@ See _why_ and _when_ to use it by reading the [wiki](https://github.com/luciomar
 ```
 import * as GTagOptIn from 'gtag-opt-in';
 
-const gtagOptIn = GTagOptIn.init('1234');
-gtagOptIn.enable();
-gtagOptIn.disable();
+const gtag = GTagOptIn.init('1234');
+gtag.optin();
+gtag.optout();
 ```
 
 ### HTML
 
 ```
 <script>
-  const gtagOptIn = GTagOptIn.init('1234');
-  gtagOptIn.enable();
-  gtagOptIn.disable();
+  const gtag = GTagOptIn.init('1234');
+  gtag.optin();
+  gtag.optout();
 </script>
 ```
 
