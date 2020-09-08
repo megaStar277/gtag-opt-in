@@ -1,13 +1,12 @@
 {
   "name": "gtag-opt-in",
-  "version": "1.0.0-alpha.9",
+  "version": "1.0.1",
   "description": "Google Analytics Opt In",
   "main": "dist/index.js",
   "module": "src/index.js",
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
