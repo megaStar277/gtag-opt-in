@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
     "test": "jest",
-    "coverage": "CI=true jest --coverage"
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
