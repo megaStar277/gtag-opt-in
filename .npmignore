@@ -1,3 +1,4 @@
 .github/
 coverage/
+.babelrc
 webpack.config.js
