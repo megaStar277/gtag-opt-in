@@ -4,6 +4,7 @@ function GTagOptIn(gaMeasurementId) {
   this.gaMeasurementId = gaMeasurementId;
 
   this.optout = () => {
+    throwIfGAMeasurementIdIsUndefined();
     window[`ga-disable-${this.gaMeasurementId}`] = true;
   };
 
@@ -34,10 +35,10 @@ function GTagOptIn(gaMeasurementId) {
   };
 }
 
-const init = (props) => {
+const register = (props) => {
   return new GTagOptIn(props);
 };
 
 export {
-  init
+  register
 };

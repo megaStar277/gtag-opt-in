@@ -24,7 +24,7 @@ See _why_ and _when_ to use it by reading the [wiki](https://github.com/luciomar
 ```
 import * as GTagOptIn from 'gtag-opt-in';
 
-const gtag = GTagOptIn.init('1234');
+const gtag = GTagOptIn.register('1234');
 gtag.optin();
 gtag.optout();
 ```
@@ -33,7 +33,7 @@ gtag.optout();
 
 ```
 <script>
-  const gtag = GTagOptIn.init('1234');
+  const gtag = GTagOptIn.register('1234');
   gtag.optin();
   gtag.optout();
 </script>
