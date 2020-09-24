@@ -1,5 +1,5 @@
 describe('GTagOptIn', () => {
-  const GA_MEASUREMENT_ID = 'UA-126456490-1';
+  const GA_MEASUREMENT_ID = 'UA-XXXXXXXXX-Y';
 
   let GTagOptIn;
 
