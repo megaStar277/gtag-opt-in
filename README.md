@@ -43,5 +43,8 @@ gtag.optout();
 ## Documentation
 Further documentation can be found at the [wiki](https://github.com/luciomartinez/gtag-opt-in/wiki) page.
 
+## Future
+The library destiny is to be replaced with official support once Google Analytics releases the [Consent mode](https://support.google.com/analytics/answer/9976101) feature which is currently under beta.
+ 
 ## License
 Software licensed under MIT license. See the [LICENSE](/LICENSE) file.
