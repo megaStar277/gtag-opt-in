@@ -31,7 +31,7 @@ function GTagOptIn(gaMeasurementId) {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', this.gaMeasurementId);
+    gtag('config', this.gaMeasurementId, {'anonymize_ip': true});
   };
 }
 

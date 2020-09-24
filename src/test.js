@@ -47,13 +47,19 @@ describe('GTagOptIn', () => {
     expect(window.dataLayer.length).toBe(2);
   });
 
-  test('set GA-disable as falsy on opt-in', () => {
+  test('set config to anonymize IP on opt-in', () => {
+    const gtag = GTagOptIn.register(GA_MEASUREMENT_ID);
+    gtag.optin();
+    expect(window.dataLayer[1][2]).toEqual({'anonymize_ip': true});
+  });
+
+  test('enable GA on opt-in', () => {
     const gtag = GTagOptIn.register(GA_MEASUREMENT_ID);
     gtag.optin();
     expect(window[`ga-disable-${GA_MEASUREMENT_ID}`]).toBeFalsy();
   });
 
-  test('set GA-disable as truthy on opt-out', () => {
+  test('disable GA on opt-out', () => {
     const gtag = GTagOptIn.register(GA_MEASUREMENT_ID);
     gtag.optout();
     expect(window[`ga-disable-${GA_MEASUREMENT_ID}`]).toBeTruthy();

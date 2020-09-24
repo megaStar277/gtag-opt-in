@@ -3,6 +3,7 @@
 
 GTag Opt In is a browser library to opt-in in Google Analytics.
 See _why_ and _when_ to use it by reading the [wiki](https://github.com/luciomartinez/gtag-opt-in/wiki) page. 
+Plus, it configures Analytics to [anonymize IP](https://support.google.com/analytics/answer/2763052).
 
 ## Install
 
