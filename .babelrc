@@ -2,7 +2,7 @@
   "presets": [["@babel/env", {"modules": false}]],
   "env": {
     "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
     }
   }
 }

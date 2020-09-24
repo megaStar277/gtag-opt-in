@@ -1,44 +1,58 @@
-function GTagOptIn(gaMeasurementId) {
-  let isInitialized = false;
+let isInitialized = false;
+let gaMeasurementId = undefined;
 
-  this.gaMeasurementId = gaMeasurementId;
+const register = (gaMeasurementIdValue) => {
+  throwIfInvalidGAMeasurementId(gaMeasurementIdValue);
+  gaMeasurementId = gaMeasurementIdValue;
+};
 
-  this.optout = () => {
-    throwIfGAMeasurementIdIsUndefined();
-    window[`ga-disable-${this.gaMeasurementId}`] = true;
-  };
+const throwIfInvalidGAMeasurementId = (value) => {
+  if (!value) {
+    throw new Error('gtag-opt-in: invalid value passed to `register` method. Make sure to use a valid Analytics ID.');
+  }
+};
 
-  this.optin = () => {
-    throwIfGAMeasurementIdIsUndefined();
-    initGTagIfNeeded();
-    window[`ga-disable-${this.gaMeasurementId}`] = false;
-  };
+const optOut = () => {
+  throwIfUnregistered();
+  window[`ga-disable-${gaMeasurementId}`] = true;
+};
 
-  const throwIfGAMeasurementIdIsUndefined = () => {
-    if (!this.gaMeasurementId) {
-      throw new Error('gtag-opt-in: no value found for Analytics ID. Make sure to initialize properly the object and set its value as a constructor parameter.');
-    }
-  };
+const optIn = () => {
+  throwIfUnregistered();
+  initGTagIfNeeded();
+  window[`ga-disable-${gaMeasurementId}`] = false;
+};
 
-  const initGTagIfNeeded = () => {
-    if (!isInitialized) {
-      initGTag();
-      isInitialized = true;
-    }
-  };
+const throwIfUnregistered = () => {
+  if (!gaMeasurementId) {
+    throw new Error('gtag-opt-in: no value found for Analytics ID. Make sure to register before by calling the `register` method.');
+  }
+};
 
-  const initGTag = () => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', this.gaMeasurementId, {'anonymize_ip': true});
-  };
-}
+const initGTagIfNeeded = () => {
+  if (!isInitialized) {
+    initGTag();
+    isInitialized = true;
+  }
+};
 
-const register = (props) => {
-  return new GTagOptIn(props);
+const initGTag = () => {
+  const gtag = getGtagAPI();
+  setInitialValuesToGtag(gtag);
+};
+
+const getGtagAPI = () => {
+  window.dataLayer = window.dataLayer || [];
+  return function(){dataLayer.push(arguments);};
+};
+
+const setInitialValuesToGtag = (gtag) => {
+  gtag('js', new Date());
+  gtag('config', gaMeasurementId, {'anonymize_ip': true});
 };
 
 export {
-  register
+  register,
+  optIn,
+  optOut
 };

@@ -19,24 +19,25 @@ See _why_ and _when_ to use it by reading the [wiki](https://github.com/luciomar
 
     <script src="https://www.npmcdn.com/gtag-opt-in"></script>
 
+It imports the library as the `GTagOptIn` global variable.
+
 ## Use
 
-### JS
+### ES6
 ```
 import * as GTagOptIn from 'gtag-opt-in';
 
-const gtag = GTagOptIn.register('1234');
-gtag.optin();
-gtag.optout();
+GTagOptIn.register('UA-XXXXXXXXX-Y');
+GTagOptIn.optin();
+GTagOptIn.optout();
 ```
 
 ### HTML
-
 ```
 <script>
-  const gtag = GTagOptIn.register('1234');
-  gtag.optin();
-  gtag.optout();
+  GTagOptIn.register('UA-XXXXXXXXX-Y');
+  GTagOptIn.optin();
+  GTagOptIn.optout();
 </script>
 ```
 
